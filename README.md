@@ -1,14 +1,14 @@
-# `@pilcrow.js/http-server`
+# `@pilcrowjs/http-server`
 
 An experimental HTTP framework.
 
 ```
-npm install @pilcrow.js/http-server
+npm install @pilcrowjs/http-server
 ```
 
 ```ts
-import { App } from "@pilcrow.js/http-server";
-import { serve } from "@pilcrow.js/http-server/node";
+import { App } from "@pilcrowjs/http-server";
+import { serve } from "@pilcrowjs/http-server/node";
 
 const app = new App().get("/", async (request, response) => {
 	response.sendText(200, "Hello world!");
@@ -20,8 +20,8 @@ serve(app, 8000);
 ## Basic usage
 
 ```ts
-import { App } from "@pilcrow.js/http-server";
-import { serve } from "@pilcrow.js/http-server/node";
+import { App } from "@pilcrowjs/http-server";
+import { serve } from "@pilcrowjs/http-server/node";
 
 const app = new App()
 	.get("/", async (request, response) => {
@@ -83,8 +83,8 @@ declare "module" {
 ## Web API
 
 ```ts
-import { App } from "@pilcrow.js/http-server";
-import { getResponse } from "@pilcrow.js/http-server/web";
+import { App } from "@pilcrowjs/http-server";
+import { getResponse } from "@pilcrowjs/http-server/web";
 
 const app = new App();
 

@@ -1,5 +1,5 @@
 {
-	"name": "@pilcrow.js/http-server",
+	"name": "@pilcrowjs/http-server",
 	"type": "module",
 	"version": "0.0.5",
 	"description": "An experimental HTTP framework",
