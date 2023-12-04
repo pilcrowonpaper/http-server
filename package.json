@@ -1,8 +1,8 @@
 {
 	"name": "@pilcrow.js/http-server",
 	"type": "module",
-	"version": "0.0.4",
-	"description": "",
+	"version": "0.0.5",
+	"description": "An experimental HTTP framework",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"module": "dist/index.js",

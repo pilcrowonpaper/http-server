@@ -1,4 +1,4 @@
-import { App } from "@pilcrow.js/http-server"
+import { App } from "@pilcrow.js/http-server";
 import { serve } from "@pilcrow.js/http-server/node";
 
 const app = new App()

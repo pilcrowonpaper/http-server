@@ -2,7 +2,7 @@ import { ServerRequest, ServerResponse } from "./index.js";
 
 import type { App } from "./index.js";
 
-export async function onRequest(webRequest: Request, app: App): Promise<Response> {
+export async function getResponse(webRequest: Request, app: App): Promise<Response> {
 	const request = new ServerRequest(
 		webRequest.method,
 		webRequest.url,

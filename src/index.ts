@@ -116,7 +116,7 @@ export class ServerRequest {
 		return new TextDecoder().decode(buffer);
 	}
 
-	public async buffer(): Promise<ArrayBuffer> {
+	public async buffer(): Promise<Uint8Array> {
 		const reader = this.body?.getReader();
 		let result = new Uint8Array();
 		while (true) {
@@ -124,7 +124,7 @@ export class ServerRequest {
 			if (done) break;
 			result = Uint8Array.from([...result, ...value]);
 		}
-		return result.buffer;
+		return result;
 	}
 
 	public async json(): Promise<object> {
@@ -160,7 +160,7 @@ export class ServerResponse {
 		this.writer = writer;
 
 		this.closed = new Promise((r) => {
-			this.resolveClosedPromise = r
+			this.resolveClosedPromise = r;
 		});
 	}
 
@@ -171,9 +171,9 @@ export class ServerResponse {
 		this.resolveClosedPromise();
 	}
 
-	public writeHead(status: number): ResponseBody {
+	public writeHead(status: number): ResponseBodyWriter {
 		this.writer.writeHead(status, this.headers);
-		return new ResponseBody(this.writer.writeBody);
+		return new ResponseBodyWriter(this.writer.writeBody);
 	}
 
 	public sendText(status: number, data: string): void {
@@ -200,7 +200,7 @@ export class ServerResponse {
 	}
 }
 
-export class ResponseBody {
+export class ResponseBodyWriter {
 	constructor(write: (data: Uint8Array) => void) {
 		this.write = write;
 	}
@@ -243,7 +243,7 @@ export class ServerHeaders {
 
 export interface ResponseWriter {
 	writeBody: (data: Uint8Array) => void;
-	writeHead: (status: number, headers: ServerHeaders) => void
+	writeHead: (status: number, headers: ServerHeaders) => void;
 }
 
 export interface Locals {}
