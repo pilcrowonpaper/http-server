@@ -1,12 +1,28 @@
 {
 	"name": "@pilcrow.js/http-server",
 	"type": "module",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"module": "dist/index.js",
 	"exports": {
 		".": "./dist/index.js",
 		"./node": "./dist/node.js",
 		"./web": "./dist/web.js"
+	},
+	"typesVersions": {
+		"*": {
+			".": [
+				"dist/index.d.ts"
+			],
+			"node": [
+				"node/web.d.ts"
+			],
+			"web": [
+				"dist/web.d.ts"
+			]
+		}
 	},
 	"scripts": {
 		"build": "tsc",
