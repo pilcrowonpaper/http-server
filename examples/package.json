@@ -14,6 +14,6 @@
 		"tsx": "^4.6.2"
 	},
 	"dependencies": {
-		"@pilcrowjs/http-server": "^0.0.5"
+		"@pilcrowjs/http-server": "^0.0.1"
 	}
 }
