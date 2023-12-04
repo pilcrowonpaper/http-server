@@ -3,7 +3,11 @@
 	"type": "module",
 	"version": "0.0.1",
 	"description": "",
-	"main": "index.js",
+	"exports": {
+		".": "./dist/index.js",
+		"./node": "./dist/node.js",
+		"./web": "./dist/web.js"
+	},
 	"scripts": {
 		"build": "tsc",
 		"format": "prettier -w ."
