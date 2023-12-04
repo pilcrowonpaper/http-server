@@ -1,5 +1,5 @@
 import { App } from "@pilcrow.js/http-server"
-import { serve } from "../src/node.js";
+import { serve } from "@pilcrow.js/http-server/node";
 
 const app = new App()
 	.get("/", async (request, response) => {

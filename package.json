@@ -1,7 +1,7 @@
 {
 	"name": "@pilcrow.js/http-server",
 	"type": "module",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"description": "",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
@@ -17,7 +17,7 @@
 				"dist/index.d.ts"
 			],
 			"node": [
-				"node/web.d.ts"
+				"dist/node.d.ts"
 			],
 			"web": [
 				"dist/web.d.ts"
