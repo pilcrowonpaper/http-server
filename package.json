@@ -1,15 +1,17 @@
 {
-	"name": "http-server",
+	"name": "@pilcrow.js/http-server",
 	"type": "module",
-	"version": "1.0.0",
+	"version": "0.0.1",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
 		"build": "tsc",
 		"format": "prettier -w ."
 	},
-	"keywords": [],
-	"author": "",
+	"files": [
+		"/dist/"
+	],
+	"author": "pilcrowOnPaper",
 	"license": "MIT",
 	"devDependencies": {
 		"@types/node": "^20.10.3",
