@@ -1,0 +1,21 @@
+{
+	"name": "http-server",
+	"type": "module",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "tsc"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "^20.10.3",
+		"prettier": "^3.1.0",
+		"typescript": "^5.3.2"
+	},
+	"dependencies": {
+		"oslo": "^0.23.2"
+	}
+}
